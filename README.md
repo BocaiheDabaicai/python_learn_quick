@@ -372,4 +372,58 @@ json.dumps(x)
 > 
 > JSON文件必须以UTF-8编码。当打开JSON文件作为一个 `text file`用于读写时，使用 `encoding="utf-8"` 。
 
+---
 
+## 语法错误与异常
+
+#### 语法错误
+
+句法错误又称解析错误
+
+#### 异常
+
+即使语句或表达式使用了正确的语法，执行时仍可能触发错误。执行时检测到的错误称为 *异常*，异常不一定导致严重的后果
+
+---
+
+## 类
+
+#### 概念
+
+- 类把数据与功能绑定在一起。
+
+- 创建新类就是创建新的对象 **类型**，从而创建该类型的新 **实例** 。
+
+- 类实例支持维持自身状态的属性，还支持（由类定义的）修改自身状态的方法
+
+#### 名称和对象
+
+对象之间相互独立，多个名称（在多个作用域内）可以绑定到同一个对象
+
+#### 定义方法
+
+```python
+class Dog:
+
+    def __init__(self, name):
+        self.name = name
+        self.tricks = []    # creates a new empty list for each dog
+
+    def add_trick(self, trick):
+        self.tricks.append(trick)
+
+>>> d = Dog('Fido')
+>>> e = Dog('Buddy')
+>>> d.add_trick('roll over')
+>>> e.add_trick('play dead')
+>>> d.tricks
+['roll over']
+>>> e.tricks
+['play dead']
+```
+
+> 常见内容总结完毕
+> 
+> 记录于 2022.05.15
+> 
+> 接下来进行算法训练
